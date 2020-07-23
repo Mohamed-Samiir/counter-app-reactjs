@@ -6,13 +6,18 @@ class Counters extends Component {
     const { onReset, onDelete, onIncrement, onDecrement, onAdd } = this.props;
     return (
       <div>
-        <button onClick={onReset} className="btn btn-dark btn-md">
-          Reset
-        </button>
-
-        <button onClick={onAdd} className="btn btn-success btn-md">
-          Add Counter
-        </button>
+        <div className="row">
+          <div className="col-1">
+            <button onClick={onReset} className="btn btn-dark btn-md">
+              Reset
+            </button>
+          </div>
+          <div className="col">
+            <button onClick={onAdd} className="btn btn-success btn-md">
+              Add Counter
+            </button>
+          </div>
+        </div>
 
         {this.props.counters.map((c) => (
           <Counter
